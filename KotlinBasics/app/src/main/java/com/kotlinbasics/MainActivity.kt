@@ -28,6 +28,7 @@ class MainActivity : ComponentActivity() {
             }
         }
         week03Variables()
+        week03Functions()
     }
 }
 
@@ -61,6 +62,36 @@ private fun week03Variables() {
     nickname = "mirae"
     println("Nickname: $nickname ${nickname?.length}")
 }
+
+private fun week03Functions() {
+//    println("Week 03: Functions")
+//
+//    fun greet(name: String) = "Hello, $name!"
+//
+//    println(greet("Android developer"))
+
+    println("== Kotlin Functions ==")
+
+    fun greet(name: String): String {  // fun 함수이름(매개변수명 : 타입) : 리턴타입 { return --- }
+        return "Hello, $name!"
+    }
+
+    // *************새로운 타입
+    fun add(a: Int, b: Int) = a + b
+    // fun add(a: Int, b: Int) : Int {
+    //    return a + b
+    //}
+
+    fun introduce(name: String, age: Int = 19){  // Int = 19는 default 매개변수
+        println("My name is $name and I'm $age years old")
+    }
+
+    println(greet("Kotlin"))
+    println("Sum: ${add(5, -71)}")
+    introduce("Kim", 7)  // introduce는 리턴 값이 없다.
+    introduce("Park")  // age는 디폴트 19로 동작
+}
+
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
