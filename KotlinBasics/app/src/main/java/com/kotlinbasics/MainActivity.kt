@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             KotlinBasicsTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
@@ -29,18 +29,37 @@ class MainActivity : ComponentActivity() {
         }
         week03Variables()
     }
-
 }
-private fun week03Variables() {
-    println("Week 02 : Variables")
 
-    val courseName = "Mobile Programming" // val은 자바의 final keyword와 같다.
-//    courseName = "DataStructure"  //자바 final 클래스, 메소드, 변수   // error 현재는 변수와 같음.
+private fun week03Variables() {
+    println("Week 03 : Variables")
+
+    val courseName = "Mobile Programming"  // Java final keyword
+    //courseName = "DataStructure"  // error
 
     var week = 2
-    week =3
+    week = 3
     println("Course : $courseName")
-    println("Week : $week")  // 에러 아님.
+    println("Week : $week")
+
+    println("========= Kotlin Variables =========")
+
+    // val(immutable) vs var(mutable)
+    val name = "Android"
+    var version = 8
+
+    println("Hi $name $version")
+
+    val age: Int = 24
+    val height: Double = 177.7
+    val isStudent: Boolean = false
+
+    println("Age: $age, Height: $height, Student: $isStudent")
+
+    //var nickname:String = null
+    var nickname:String? = null
+    nickname = "mirae"
+    println("Nickname: $nickname ${nickname?.length}")
 }
 
 @Composable
@@ -57,4 +76,3 @@ fun GreetingPreview() {
     KotlinBasicsTheme {
         Greeting("Android")
     }
-}
