@@ -27,7 +27,20 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        week03Variables()
     }
+
+}
+private fun week03Variables() {
+    println("Week 02 : Variables")
+
+    val courseName = "Mobile Programming" // val은 자바의 final keyword와 같다.
+//    courseName = "DataStructure"  //자바 final 클래스, 메소드, 변수   // error 현재는 변수와 같음.
+
+    var week = 2
+    week =3
+    println("Course : $courseName")
+    println("Week : $week")  // 에러 아님.
 }
 
 @Composable
