@@ -27,9 +27,40 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        week03Variables()
-        week03Functions()
+//        week03Variables()
+//        week03Functions()
+
+        week04Classes()
     }
+}
+
+private fun week04Classes() {
+    println("=================Kotlin Classes=================")
+
+    class Student{
+        var name: String = ""
+        var age: Int =0
+
+        fun introduce(){
+            println("Hi, I'm $name and I'm $age years old")
+        }
+    }
+
+    val student1 = Student()
+    student1.name="Mirae"
+    student1.age=21
+    student1.introduce()
+
+
+    // data 는 자료 저장
+    data class Person(val name:String, val age:Int)
+
+    val person1 = Person("Kim", 23)
+    val person2 = Person("Lee", 21)
+
+    println("Person1 : $person1") // Java toString()
+    println("Person1 : ${person1.name}")
+    println("Person2 : ${person2.age}")
 }
 
 private fun week03Variables() {
