@@ -82,6 +82,7 @@ private fun week03Functions() {
     //    return a + b
     //}
 
+    // 디폴트 매개변수
     fun introduce(name: String, age: Int = 19){  // Int = 19는 default 매개변수
         println("My name is $name and I'm $age years old")
     }
@@ -90,6 +91,25 @@ private fun week03Functions() {
     println("Sum: ${add(5, -71)}")
     introduce("Kim", 7)  // introduce는 리턴 값이 없다.
     introduce("Park")  // age는 디폴트 19로 동작
+
+    fun printAll(vip:Boolean, name:String){
+        println("$vip,$name")
+    }
+
+// 가변인수
+//    fun printMany(msg: String){
+// vararg : variable arguments 가변 매개변수
+    // vararg 써줘야 여러개 매개변수 가능.
+    fun printMany(vararg msg: String){
+        for(m in msg) println(m)
+    }
+
+    printAll(true,"dy")
+    // printAll("dy",true) // Error : 순서 지키기
+    // 지정 인수
+    printAll(name="mirae",vip=true)  // named argument 지정 가능.
+
+    printMany("A","B","C","D")
 }
 
 
