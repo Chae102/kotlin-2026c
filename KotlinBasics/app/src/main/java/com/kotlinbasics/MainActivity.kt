@@ -31,7 +31,19 @@ class MainActivity : ComponentActivity() {
 //        week03Functions()
 
         week04Classes()
+        week04Collections()
     }
+}
+private fun week04Collections(){
+    println("=================Kotlin Classes=================")
+
+    val fruits = listOf("apple","banana","orange")
+    val mutableFruits = mutableListOf("kiwu","watermelon")
+
+//    fruits.add("kiwi")  // immutable 불변 - 값 추가 불가
+    mutableFruits.add("banana")
+    println("Fruits : $fruits")
+    println("MutableFruits : $mutableFruits")
 }
 
 private fun week04Classes() {
